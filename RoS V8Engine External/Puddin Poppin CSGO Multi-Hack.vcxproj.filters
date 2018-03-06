@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Hack">
+      <UniqueIdentifier>{6efa8ae4-f3a4-4094-87e0-694905871ca4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\Aimbot">
+      <UniqueIdentifier>{66f94d35-9eab-41fd-9164-722d92b9a8fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\ESP">
+      <UniqueIdentifier>{40c6045e-de1d-4725-a94c-211261e5afee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\Bhop">
+      <UniqueIdentifier>{3b19375c-f6f8-4f19-b219-260e7817f0a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\TriggerBot">
+      <UniqueIdentifier>{bbc77815-3eea-43c8-8f78-538f804659fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System">
+      <UniqueIdentifier>{b0fd1fd7-1382-4a81-a796-46ca8948464b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\D3D">
+      <UniqueIdentifier>{bb65640b-152c-45ca-96a4-d3fa64576d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\OverlayWindow">
+      <UniqueIdentifier>{167e0a45-02f3-4fb8-9494-cca0107cdc4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\IO">
+      <UniqueIdentifier>{667f3ea7-1612-479d-b4f5-6131fa8730e9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralPlayerEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalPlayerEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot.h">
+      <Filter>Hack\Aimbot</Filter>
+    </ClInclude>
+    <ClInclude Include="ESP.h">
+      <Filter>Hack\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="Bhop.h">
+      <Filter>Hack\Bhop</Filter>
+    </ClInclude>
+    <ClInclude Include="Triggerbot.h">
+      <Filter>Hack\TriggerBot</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D.h">
+      <Filter>Hack\System\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlayWindow.h">
+      <Filter>Hack\System\OverlayWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="IO.h">
+      <Filter>Hack\System\IO</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalPlayerEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralPlayerEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVars.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>Hack\Aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="ESP.cpp">
+      <Filter>Hack\ESP</Filter>
+    </ClCompile>
+    <ClCompile Include="Bhop.cpp">
+      <Filter>Hack\Bhop</Filter>
+    </ClCompile>
+    <ClCompile Include="Triggerbot.cpp">
+      <Filter>Hack\TriggerBot</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D.cpp">
+      <Filter>Hack\System\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlayWindow.cpp">
+      <Filter>Hack\System\OverlayWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="IO.cpp">
+      <Filter>Hack\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

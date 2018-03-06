@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Aimbot.cpp">
+      <Filter>Hack\Aimbot</Filter>
+    </ClCompile>
+    <ClCompile Include="Bhop.cpp">
+      <Filter>Hack\Bhop</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D.cpp">
+      <Filter>Hack\System\D3D</Filter>
+    </ClCompile>
+    <ClCompile Include="ESP.cpp">
+      <Filter>Hack\ESP</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralPlayerEntity.cpp">
+      <Filter>Hack\System\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalPlayerEntity.cpp">
+      <Filter>Hack\System\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVars.cpp">
+      <Filter>Hack\System\Variables</Filter>
+    </ClCompile>
+    <ClCompile Include="IO.cpp">
+      <Filter>Hack\System\Variables</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlayWindow.cpp">
+      <Filter>Hack\System\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Triggerbot.cpp">
+      <Filter>Hack\Triggerbot</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Hack\System\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Hack\System\Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aimbot.h">
+      <Filter>Hack\Aimbot</Filter>
+    </ClInclude>
+    <ClInclude Include="Bhop.h">
+      <Filter>Hack\Bhop</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D.h">
+      <Filter>Hack\System\D3D</Filter>
+    </ClInclude>
+    <ClInclude Include="ESP.h">
+      <Filter>Hack\ESP</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralPlayerEntity.h">
+      <Filter>Hack\System\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalPlayerEntity.h">
+      <Filter>Hack\System\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVars.h">
+      <Filter>Hack\System\Variables</Filter>
+    </ClInclude>
+    <ClInclude Include="IO.h">
+      <Filter>Hack\System\Variables</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlayWindow.h">
+      <Filter>Hack\System\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Triggerbot.h">
+      <Filter>Hack\Triggerbot</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Hack\System\Main\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Hack\System\Main\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Hack">
+      <UniqueIdentifier>{27f7b698-be37-4170-ba4e-d5aebf0db03e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\Aimbot">
+      <UniqueIdentifier>{91eac142-dd38-4845-8428-01c41de3f394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\Bhop">
+      <UniqueIdentifier>{32380211-56d6-4cc3-8571-c485a3f11ba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System">
+      <UniqueIdentifier>{babb458c-3b15-44ee-bb8b-d6799698bb45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\D3D">
+      <UniqueIdentifier>{993ceab1-2267-4d5e-8bee-50c8be20b022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\ESP">
+      <UniqueIdentifier>{103eaf51-99fe-48ab-82cd-a9c795ed0a0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\Entities">
+      <UniqueIdentifier>{a7e9ac9c-b601-4dfb-b25d-f7e7758927f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\Variables">
+      <UniqueIdentifier>{14caff4d-8973-45d7-9f7d-5b94edc7b92b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\Overlay">
+      <UniqueIdentifier>{76a9b6c0-56e8-4e89-9725-2064ffb44f93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\Triggerbot">
+      <UniqueIdentifier>{2210720e-9dd6-497c-95e8-03b3acc9cc91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\Main">
+      <UniqueIdentifier>{2742096e-ac19-4836-924b-3ed9d9bcb13c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\System\Main\Headers">
+      <UniqueIdentifier>{b5277da2-b9e1-408e-ac3a-a36cc56c4981}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
