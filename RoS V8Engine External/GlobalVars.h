@@ -12,7 +12,7 @@ struct tGlobalVars
 		DWORD m_bHasDefuser;
 		DWORD m_iPlayerC4;
 		DWORD m_ArmorValue;
-        DWORD m_dwViewMatrix;
+        DWORD m_dwSceneContext;
         DWORD m_dwEntityList;
         DWORD m_dwLocalPlayer;
         DWORD m_iHealth;
@@ -36,6 +36,7 @@ struct tGlobalVars
         DWORD RadarName2;
         DWORD EntitySize;
 		DWORD Client;
+		DWORD m_EntityOffset;
     } Offsets;
 
     struct

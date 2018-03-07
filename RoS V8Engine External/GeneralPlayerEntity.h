@@ -37,6 +37,12 @@ struct tGeneralPlayerEntity
 		tDataStructs::tDataChunk DataChunk1;
 		tDataStructs::tDataChunk DataChunk2;
 		DWORD BaseAddress;
+		DWORD CurrentEntity;
+		DWORD dwEntityStart;
+		DWORD dwLast;
+		DWORD dwFlags;
+		bool bFirst;
+		bool bLast;
 		bool LifeState;
 		int TeamNumber;
 		int Health;
@@ -52,11 +58,11 @@ struct tGeneralPlayerEntity
 		bool HasDefuser;
 		int CompetetiveRankNumber;
 		std::wstring CompetetiveRank;
-		tDataStructs::tEntityType EntityType;
 		DWORD GameResourcesBaseAddress;
 		bool Dormant;
 		byte Flags;
 		tDataStructs::tPlayerName PlayerName;
+		tDataStructs::tEntityType EntityType;
 		DWORD RadarBaseAddress;
 		DWORD RadarPointerBaseAddress;
 	};
@@ -64,7 +70,8 @@ struct tGeneralPlayerEntity
     {
 		bool IsJumping(byte Flags);
 		std::wstring GetCompetetiveRank(int CompetetiveRankNumber);
-		void GetGeneralPlayerEntityInfo(tGeneralPlayerEntityInfo* GeneralPlayerEntityInfo, int PlayerNumber);
+		void GetCurrentLastEntityAdress(tGeneralPlayerEntityInfo* FirstLastEntityInfo);
+		void GetGeneralPlayerEntityInfo(tGeneralPlayerEntityInfo* GeneralPlayerEntityInfo, DWORD CurrentEntity);
 		D3DXVECTOR3 GetBonePosition(tGeneralPlayerEntity::tDataStructs::tBoneMatrix* BoneMatrix, int BoneNumber);
     } Functions;
 };

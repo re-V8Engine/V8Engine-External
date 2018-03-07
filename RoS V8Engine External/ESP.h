@@ -7,6 +7,7 @@ struct tESP
 	D3DCOLOR InfoTextOutlineColor;
 	tLocalPlayerEntity::tLocalPlayerEntityInfo LocalPlayerEntityInfo;
 	tGeneralPlayerEntity::tGeneralPlayerEntityInfo GeneralPlayerEntityInfo;
+	tGeneralPlayerEntity::tGeneralPlayerEntityInfo CurrentLastEntityInfo;
     struct tDataStructs
     {
         struct tPlayerSkeleton

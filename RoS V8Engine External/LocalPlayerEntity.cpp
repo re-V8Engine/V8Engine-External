@@ -40,7 +40,7 @@ void tLocalPlayerEntity::tLocalPlayerEntityFunctions::GetLocalPlayerEntityInfo(t
 					//memmove_s(&LocalPlayerEntityInfo->Velocity, sizeof(LocalPlayerEntityInfo->Velocity), &LocalPlayerEntityInfo->DataChunk.Data[pGlobalVars.Offsets.m_vecVelocity], sizeof(LocalPlayerEntityInfo->Velocity));
 					//pIO.Functions.Read<D3DXVECTOR3>(&LocalPlayerEntityInfo->ViewAngle, LocalPlayerEntityInfo->ClientStateBaseAddress + pGlobalVars.Offsets.m_dwViewAngle);
 					//memmove_s(&LocalPlayerEntityInfo->ViewOffset, sizeof(LocalPlayerEntityInfo->ViewOffset), &LocalPlayerEntityInfo->DataChunk.Data[pGlobalVars.Offsets.m_vecViewOffset], sizeof(LocalPlayerEntityInfo->ViewOffset));
-					//pIO.Functions.Read<tDataStructs::tViewMatrix>(&LocalPlayerEntityInfo->ViewMatrix, pIO.ClientModuleBaseAddress + pGlobalVars.Offsets.m_dwViewMatrix);
+					pIO.Functions.Read<tDataStructs::tViewMatrix>(&LocalPlayerEntityInfo->ViewMatrix, pIO.ClientModuleBaseAddress + pGlobalVars.Offsets.m_dwSceneContext + 4 + 196);
 					LocalPlayerEntityInfo->Valid = true;
 				}
 

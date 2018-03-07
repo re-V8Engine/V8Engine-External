@@ -401,8 +401,11 @@ void tESP::tESPFunctions::Tick()
 	pD3D.Functions.BeginRender();
 	/*if (pGlobalVars.EspSettings.Enabled)
 	{*/
-		/*for (int PlayerNumber = 0; PlayerNumber < 64; PlayerNumber++)
-		{*/
+	pGeneralPlayerEntity.Functions.GetCurrentLastEntityAdress(&pESP.CurrentLastEntityInfo);
+	pESP.CurrentLastEntityInfo.CurrentEntity = pESP.CurrentLastEntityInfo.dwEntityStart;
+	int y = 60;
+		while (pESP.CurrentLastEntityInfo.dwEntityStart != pESP.CurrentLastEntityInfo.dwLast)
+		{
 			pLocalPlayerEntity.Functions.GetLocalPlayerEntityInfo(&pESP.LocalPlayerEntityInfo);
 			if (pESP.LocalPlayerEntityInfo.Valid)
 			{
@@ -412,20 +415,40 @@ void tESP::tESPFunctions::Tick()
 				pD3D.Functions.DrawString(500, 30, posX, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
 				pD3D.Functions.DrawString(500, 45, posY, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
 				pD3D.Functions.DrawString(500, 60, posZ, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
-				/*pGeneralPlayerEntity.Functions.GetGeneralPlayerEntityInfo(&pESP.GeneralPlayerEntityInfo, PlayerNumber);
-				if (pESP.GeneralPlayerEntityInfo.Valid && pESP.LocalPlayerEntityInfo.Index != PlayerNumber)//
+
+				
+				
+				pIO.Functions.Read<DWORD>(&pESP.CurrentLastEntityInfo.CurrentEntity, pESP.CurrentLastEntityInfo.dwEntityStart + 0xC);
+				pGeneralPlayerEntity.Functions.GetGeneralPlayerEntityInfo(&pESP.GeneralPlayerEntityInfo, pESP.CurrentLastEntityInfo.CurrentEntity);
+				if (pESP.GeneralPlayerEntityInfo.Valid && pESP.LocalPlayerEntityInfo.BaseAddress != pESP.GeneralPlayerEntityInfo.CurrentEntity)
 				{
-					DrawBox(PlayerNumber);
-					DrawHealthBar();
-					DrawSnapLines(PlayerNumber);
-					DrawInfoText(PlayerNumber);
-					DrawTargetBoneMarker();
+					std::wstring CurEnt = std::to_wstring(pESP.CurrentLastEntityInfo.CurrentEntity);
+					pD3D.Functions.DrawString(500, y += 15, CurEnt, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
+					std::wstring posX = L"X: " + std::to_wstring(pESP.GeneralPlayerEntityInfo.Origin[0]);
+					std::wstring posY = L"Y: " + std::to_wstring(pESP.GeneralPlayerEntityInfo.Origin[2]);
+					std::wstring posZ = L"Z: " + std::to_wstring(pESP.GeneralPlayerEntityInfo.Origin[1]);
+					pD3D.Functions.DrawString(500, y += 15, posX, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
+					pD3D.Functions.DrawString(500, y += 15, posY, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
+					pD3D.Functions.DrawString(500, y += 15, posZ, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
+					std::wstring flags;
+					flags.clear();
+					flags.append(pESP.GeneralPlayerEntityInfo.EntityType.Text);
+					pD3D.Functions.DrawString(500, y += 15, flags, D3DCOLOR_ARGB(255, 255, 255, 255), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
+
+					
+					//DrawBox(PlayerNumber);
+					//DrawHealthBar();
+					//DrawSnapLines(PlayerNumber);
+					//DrawInfoText(PlayerNumber);
+					//DrawTargetBoneMarker();
 				}
-				DrawRecoilMarker();*/
+				pIO.Functions.Read<DWORD>(&pESP.CurrentLastEntityInfo.dwEntityStart, pESP.CurrentLastEntityInfo.dwEntityStart);
+				//DrawRecoilMarker();
+				pD3D.Functions.DrawString(pOverlayWindow.Width / 2.f, 10, pGlobalVars.Version, D3DCOLOR_ARGB(80, 255, 255, 255), true, D3DCOLOR_ARGB(120, 0, 0, 0), true);
+				pD3D.Functions.EndRender();
 			}
-		/*}*/
+		}
 		//pD3D.Functions.DrawString(5, 10, pGlobalVars.debuglog, D3DCOLOR_ARGB(255, 255, 0, 0), true, D3DCOLOR_ARGB(255, 0, 0, 0), false);
 	/*}*/
-	pD3D.Functions.DrawString(pOverlayWindow.Width / 2.f, 10, pGlobalVars.Version, D3DCOLOR_ARGB(80, 255, 255, 255), true, D3DCOLOR_ARGB(120, 0, 0, 0), true);
-	pD3D.Functions.EndRender();
+	
 }
